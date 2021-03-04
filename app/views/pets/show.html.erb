@@ -1,0 +1,21 @@
+<div class="col-sm-6 offset-sm-3" style="width: 38rem; height: 360px">
+<div class=" card mt-3 p-3 border border-success" >
+  <div class="card-body" >
+    <h5 class="card-title text-center"><%= @pet.name %></h5>
+    <h6 class="card-subtitle mb-2 ml-3 text-muted">Species : <%= @pet.species %></h6>
+    <p class="card-text mb-2 ml-3 text-muted">Address : <%= @pet.address %></p>
+    <p class="card-text ml-3 text-muted">Date : <%= @pet.found_on %></p>
+    <div class=" d-flex justify-content-between">
+    <%= link_to edit_pet_path(@pet) do %>
+    <i class="fas fa-pencil-alt"></i>Edit
+    <% end %>
+    <%= link_to pets_path do %>
+    <i class="fa fa-history "></i> Back
+    <% end %>
+    </div>
+    </div>
+  <div class="float-right">
+    <%= image_tag ("pic1.jpeg"), class: "img-responsive w-25 h-25" %>
+  </div>
+</div>
+</div>

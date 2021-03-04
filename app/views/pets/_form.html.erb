@@ -1,0 +1,12 @@
+<div class="col-sm-4 offset-sm-4">
+  <%= simple_form_for(@pet) do |f| %>
+    <%= f.input :name %>
+    <%= f.input :address %>
+    <%= f.input :species %>
+    <%= f.input :found_on %>
+    <%= f.submit %>
+  <% end %>
+  <%= link_to pets_path do %>
+  <i class="fa fa-history mt-3"></i> Back to list
+<% end %>
+</div>

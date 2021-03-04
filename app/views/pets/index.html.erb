@@ -1,0 +1,29 @@
+<div class="container">
+  <div class="row">
+    <div class="col-sm-4 offset-sm-2 mt-5">
+      <% @pets.each do |pet| %>
+        <ul>
+
+         <li class="list-unstyled">
+            Name : <%= link_to pet.name,pet_path(pet.id), style: "color:#337ab7;", class: "h3" %>&nbsp;
+
+
+
+
+
+            <%= link_to edit_pet_path(pet.id) do %>
+            <i class="fas fa-pencil-alt text-warning"></i><% end %>
+            &nbsp;
+            <%= link_to pet_path(pet.id), method: :delete, data: { confirm: "Delete #{pet.name}?" } do %>
+            <i class="far fa-trash-alt text-danger"></i><% end %>
+          </li>
+            <hr>
+            <li>Address :<%= pet.address %></li>
+            <li>Species : <%= pet.species %></li>
+            <li>Date :<%= pet.found_on %></li>
+        </ul>
+      <% end %>
+    </div>
+  </div>
+</div>
+
